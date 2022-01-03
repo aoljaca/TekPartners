@@ -1,6 +1,7 @@
 import Vue from "vue";
 import ExternalFacingView from "../components/shared/ExternalFacingView.vue"
 import VueRouter, { RouteConfig } from "vue-router";
+import Body from "../components/shared/MainPage/Body.vue"
 
 Vue.use(VueRouter);
 
@@ -18,13 +19,11 @@ const routes: Array<RouteConfig> = [
       //   path: "",
       //   redirect: () => ({ name: "Login" }),
       // },
-      // {
-      //   path: "login",
-      //   name: "Login",
-      //   beforeEnter: (to, from, next) =>
-      //     AdminAuth.checkForSession() ? next({ name: "Admin" }) : next(),
-      //   component: AdminLogin,
-      // },
+      {
+        path: "",
+        name: "Body",
+        component: Body,
+      },
       // {
       //   path: "reset",
       //   name: "Reset Password",

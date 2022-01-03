@@ -1,13 +1,10 @@
 <template>
   <div class="d-flex flex-column space-between h-100">
-    <main-header />
-    <!-- <v-row justify="center">
+    <v-row justify="center">
       <v-col align-self="center">
-        <slot></slot>
         <router-view :key="$route.fullPath" />
       </v-col>
-    </v-row> -->
-
+    </v-row>
     <!-- <conference-footer /> -->
   </div>
 </template>
