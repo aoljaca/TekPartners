@@ -4,6 +4,7 @@
 -ToolTip so title of book or other text stays on one line and can be read on hover or click
 -A search bar to search for books
 -A filter to search for books by year
+-Authors routes - If I can do books I could easily do authors
 -More
 
 ## Project setup
