@@ -1,49 +1,33 @@
 import Vue from "vue";
-import ExternalFacingView from "../components/shared/ExternalFacingView.vue"
+import ExternalFacingView from "../components/shared/ExternalFacingView.vue";
+import Books from "../components/Books.vue";
+import Book from "../components/Book.vue"
+import LandingPage from "../components/LandingPage.vue"
 import VueRouter, { RouteConfig } from "vue-router";
-import Body from "../components/shared/MainPage/Body.vue"
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "*",
-    name: "Not Found",
-    redirect: () => "/not-found",
-  },
-  {
     path: "/",
     component: ExternalFacingView,
     children: [
-      // {
-      //   path: "",
-      //   redirect: () => ({ name: "Login" }),
-      // },
       {
         path: "",
-        name: "Body",
-        component: Body,
+        name: "Landing Page",
+        component: LandingPage,
       },
-      // {
-      //   path: "reset",
-      //   name: "Reset Password",
-      //   component: ResetPassword,
-      // },
-      // {
-      //   path: "forgot-password",
-      //   name: "Forgot Password",
-      //   component: ForgotPassword,
-      // },
+      {
+        path: "/books",
+        name: "Books",
+        component: Books,
+      },
+      {
+        path: "/books/:id",
+        name: "Book",
+        component: Book,
+      },
     ],
-  },
-  {
-    path: "/join/:code",
-    name: "Join",
-    redirect: (route: any) => ({
-      name: "Join Meeting by Code",
-      params: { code: route.params.code },
-      query: { passcode: route.query.passcode },
-    }),
   },
 ]
 

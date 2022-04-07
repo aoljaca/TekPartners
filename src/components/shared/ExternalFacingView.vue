@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-column space-between h-100">
-    <v-row justify="center">
+    <v-app-bar elevation="2" class="d-flex justify-center bg" color="blue" max-height="60"><h2>TekPartners</h2></v-app-bar>
+    <v-row justify="center" class="mt-10 mx-10">
       <v-col align-self="center">
         <router-view :key="$route.fullPath" />
       </v-col>
@@ -11,10 +12,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import MainHeader from "./MainPage/Header.vue"
+import Header from "./Shared/Header.vue"
 @Component({
   components: {
-    MainHeader,
+    Header,
   },
 })
 export default class ExternalFacingView extends Vue {

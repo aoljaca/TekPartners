@@ -1,0 +1,183 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Northanger Abbey",
+      "author": 1,
+      "year": 1814,
+      "publisher": "Penguin",
+      "isbn": "9780140434132",
+      "coverImageUrl": "https://pictures.abebooks.com/isbn/9780141439792-uk.jpg"
+    },
+    {
+      "id": 2,
+      "title": "War and Peace",
+      "author": 2,
+      "year": 1865,
+      "publisher": "Penguin",
+      "isbn": "9780758328007",
+      "coverImageUrl": "https://images.penguinrandomhouse.com/cover/9781400079988"
+    },
+    {
+      "id": 3,
+      "title": "Anna Karenina",
+      "author": 2,
+      "year": 1875,
+      "publisher": "Penguin",
+      "isbn": "9780075536321",
+      "coverImageUrl": "https://pictures.abebooks.com/isbn/9781582881058-uk.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Mrs. Dalloway",
+      "author": 3,
+      "year": 1925,
+      "publisher": "Harcourt Brace",
+      "isbn": "9780141182490",
+      "coverImageUrl": "https://upload.wikimedia.org/wikipedia/en/6/67/Mrs._Dalloway_cover.jpg"
+    },
+    {
+      "id": 5,
+      "title": "The Hours",
+      "author": 4,
+      "year": 1999,
+      "publisher": "Harcourt Brace",
+      "isbn": "9780312243029",
+      "coverImageUrl": "https://cdn11.bigcommerce.com/s-cw25miz5h3/images/stencil/1280x1280/products/256926/285177/9780571214761__22350.1543929195.jpg?c=2"
+    },
+    {
+      "id": 6,
+      "title": "Huckleberry Finn",
+      "author": 5,
+      "year": 1865,
+      "publisher": "Penguin",
+      "isbn": "9780520228382",
+      "coverImageUrl": "https://www.ustarnovels.co.uk/media/1000x1000/cover_huckleberry_finn.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Bleak House",
+      "author": 6,
+      "year": 1870,
+      "publisher": "Random House",
+      "isbn": "9780141439723",
+      "coverImageUrl": "https://m.media-amazon.com/images/I/51KbyLbDXWL.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Tom Sawyer",
+      "author": 5,
+      "year": 1862,
+      "publisher": "Random House",
+      "isbn": "9780520235755",
+      "coverImageUrl": "https://almabooks.com/wp-content/uploads/2016/10/9781847494900.jpg"
+    },
+    {
+      "id": 9,
+      "title": "A Room of One's Own",
+      "author": 3,
+      "year": 1922,
+      "publisher": "Penguin",
+      "isbn": "9780156030410",
+      "coverImageUrl": "https://almabooks.com/wp-content/uploads/2018/10/9781847497888.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Harry Potter",
+      "author": 7,
+      "year": 2000,
+      "publisher": "Harcourt Brace",
+      "isbn": "9780747532743",
+      "coverImageUrl": "https://pictures.abebooks.com/isbn/9780747549550-uk.jpg"
+    },
+    {
+      "id": 11,
+      "title": "One Hundred Years of Solitude",
+      "author": 8,
+      "year": 1967,
+      "publisher": "Harper  Perennial",
+      "isbn": "9780060929794",
+      "coverImageUrl": "https://s26162.pcdn.co/wp-content/uploads/2018/02/100_Years_First_Ed_Hi_Res-768x1153.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Hamlet, Prince of Denmark",
+      "author": 9,
+      "year": 1603,
+      "publisher": "Signet  Classics",
+      "isbn": "9780140707342",
+      "coverImageUrl": "https://usborne.com/media/catalog/product/cache/29b1c625a6a034d41d27bd6a2f264776/9/7/9781474948111_cover_image.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Lord of the Rings",
+      "author": 10,
+      "year": 1937,
+      "publisher": "Penguin",
+      "isbn": "9780007123810",
+      "coverImageUrl": "https://cdn.waterstones.com/bookjackets/large/9780/2611/9780261103252.jpg"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "lastName": "Austen",
+      "firstName": "Jane",
+      "imageUrl": "https://pictures.abebooks.com/isbn/9780141439792-uk.jpg"
+    },
+    {
+      "id": 2,
+      "lastName": "Tolstoy",
+      "firstName": "Leo",
+      "imageUrl": "https://pictures.abebooks.com/isbn/9781582881058-uk.jpg"
+    },
+    {
+      "id": 3,
+      "lastName": "Woolf",
+      "firstName": "Virginia",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/67/Mrs._Dalloway_cover.jpg"
+    },
+    {
+      "id": 4,
+      "lastName": "Cunnningham",
+      "firstName": "Michael",
+      "imageUrl": "https://cdn11.bigcommerce.com/s-cw25miz5h3/images/stencil/1280x1280/products/256926/285177/9780571214761__22350.1543929195.jpg?c=2"
+    },
+    {
+      "id": 5,
+      "lastName": "Twain",
+      "firstName": "Mark",
+      "imageUrl": "https://www.ustarnovels.co.uk/media/1000x1000/cover_huckleberry_finn.jpg"
+    },
+    {
+      "id": 6,
+      "lastName": "Dickens",
+      "firstName": "Charles",
+      "imageUrl": "https://m.media-amazon.com/images/I/51KbyLbDXWL.jpg"
+    },
+    {
+      "id": 7,
+      "lastName": "Rowling",
+      "firstName": "J.K.",
+      "imageUrl": "https://pictures.abebooks.com/isbn/9780747549550-uk.jpg"
+    },
+    {
+      "id": 8,
+      "lastName": "Márquez",
+      "firstName": "Gabriel García",
+      "imageUrl": "https://s26162.pcdn.co/wp-content/uploads/2018/02/100_Years_First_Ed_Hi_Res-768x1153.jpg"
+    },
+    {
+      "id": 9,
+      "lastName": "Shakespeare",
+      "firstName": "William",
+      "imageUrl": "https://usborne.com/media/catalog/product/cache/29b1c625a6a034d41d27bd6a2f264776/9/7/9781474948111_cover_image.jpg"
+    },
+    {
+      "id": 10,
+      "lastName": "Tolkien",
+      "firstName": "J.R.",
+      "imageUrl": "https://cdn.waterstones.com/bookjackets/large/9780/2611/9780261103252.jpg"
+    }
+  ]
+}

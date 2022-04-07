@@ -1,3 +1,11 @@
+## What I would add if I had more time
+
+-Pagination
+-ToolTip so title of book or other text stays on one line and can be read on hover or click
+-A search bar to search for books
+-A filter to search for books by year
+-More
+
 ## Project setup
 ```
 npm install
