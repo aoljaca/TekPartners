@@ -8,47 +8,23 @@
           hide-details
           dense
           prepend-icon="mdi-magnify"
-          v-model="searchBook"
+          v-model="searchAuthor"
           @keyup="updateAfterSearch"
         />
-      </v-col>
-      <v-col cols="auto">
-        <v-dialog v-model="filterDialog" max-width="290" class="bg-green">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn class="bg-green" dark v-bind="attrs" v-on="on">
-              Filters
-            </v-btn>
-          </template>
-          <v-card
-            class="set-opactiy bg-green font-weight-bold overflow-auto"
-            dark
-            height="350"
-          >
-            <div class="pa-4 d-flex align-center display-center">
-              <v-range-slider
-                hint="Years"
-                min="1800"
-                max="2000"
-                v-model="bookYearRange"
-              ></v-range-slider>
-              {{ bookYearRange }}
-            </div>
-          </v-card>
-        </v-dialog>
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col
-        v-for="(book, i) in historyList"
+        v-for="(author, i) in historyList"
         :key="i"
         :cols="!showCondensedVersion ? 4 : 12"
       >
         <v-card
-          @click="takeToBook(book)"
+          @click="takeToAuthor(author)"
           class="d-flex flex-column align-center justify-center"
           height="400"
         >
-          <v-img :src="book.coverImageUrl" height="200px"></v-img>
+          <v-img :src="author.imageUrl" height="200px"></v-img>
 
           <v-tooltip
             bottom
@@ -61,28 +37,10 @@
                 v-on="isOverflown() ? on : undefined"
                 ref="roomName"
                 class="truncate font-weight-600"
-                >{{ book.title }}</v-card-title
+                >{{ author.firstName }} {{ author.lastName }}</v-card-title
               >
             </template>
-            <span>{{ book.title }}</span>
-          </v-tooltip>
-
-          <v-tooltip
-            bottom
-            :open-on-click="showCondensedVersion"
-            :open-on-hover="!showCondensedVersion"
-          >
-            <template v-slot:activator="{ on, attrs }">
-              <v-card-subtitle
-                v-bind="attrs"
-                v-on="isOverflown() ? on : undefined"
-                ref="roomName"
-                class="truncate font-weight-600"
-              >
-                Publisher: {{ book.publisher }}
-              </v-card-subtitle>
-            </template>
-            <span>{{ book.publisher }}</span>
+            <span>{{ author.firstName }} {{ author.lastName }}</span>
           </v-tooltip>
         </v-card>
       </v-col>
@@ -100,17 +58,16 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { books } from "../../Datastore.json";
-import { Book } from "../model/book";
+import { authors } from "../../Datastore.json";
+import { Author } from "../model/author";
 @Component
 export default class MainHeader extends Vue {
-  books: Book[] = books;
-  searchBook = "";
+  authors: Author[] = authors;
+  searchAuthor = "";
   page = 1;
   pageSize = 6;
   listCount = 0;
   historyList: any[] = [];
-  bookYearRange = [1800, 2000];
 
   get pages() {
     if (this.pageSize == null || this.listCount == null) return 0;
@@ -121,19 +78,17 @@ export default class MainHeader extends Vue {
   }
   get filteredBooks(): any[] {
     const toReturn: any[] = [];
-    this.books.forEach((b) => {
+    this.authors.forEach((a) => {
       if (
-        b.title.toLowerCase().startsWith(this.searchBook.toLowerCase()) &&
-        b.year > this.bookYearRange[0] &&
-        b.year < this.bookYearRange[1]
+        a.firstName.toLowerCase().startsWith(this.searchAuthor.toLowerCase())
       ) {
-        toReturn.push(b);
+        toReturn.push(a);
       }
     });
     return toReturn;
   }
-  takeToBook(book: Book): void {
-    this.$router.push({ name: "Book", params: { id: book.id.toString() } });
+  takeToAuthor(author: Author): void {
+    this.$router.push({ name: "Author", params: { id: author.id.toString() } });
   }
   isOverflown(): boolean {
     const element = this.$refs.roomName as any;
