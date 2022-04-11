@@ -25,19 +25,19 @@ const routes: Array<RouteConfig> = [
         component: Books,
       },
       {
-        path: "/books/:id",
+        path: "/book/:id",
         name: "Book",
         component: Book,
       },
       {
         path: "/authors",
-        name: "Author",
-        component: Author,
-      },
-      {
-        path: "/authors/:id",
         name: "Authors",
         component: Authors,
+      },
+      {
+        path: "/author/:id",
+        name: "Author",
+        component: Author,
       },
     ],
   },
