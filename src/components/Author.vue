@@ -1,6 +1,6 @@
 <template>
   <div>
-      <v-row justify="center" align="center" v-if="book">
+      <v-row justify="center" align="center" v-if="author">
           <v-card class="d-flex flex-column align-center justify-center" height="400">
           <v-img
             :src="author.imageUrl"

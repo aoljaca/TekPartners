@@ -30,8 +30,11 @@
                 min="1800"
                 max="2000"
                 v-model="bookYearRange"
+                @change="updateAfterSearch"
               ></v-range-slider>
-              {{ bookYearRange }}
+            </div>
+            <div>
+              {{bookYearRange}}
             </div>
           </v-card>
         </v-dialog>
@@ -76,7 +79,7 @@
               <v-card-subtitle
                 v-bind="attrs"
                 v-on="isOverflown() ? on : undefined"
-                ref="roomName"
+                ref="book"
                 class="truncate font-weight-600"
               >
                 Publisher: {{ book.publisher }}
@@ -111,6 +114,7 @@ export default class MainHeader extends Vue {
   listCount = 0;
   historyList: any[] = [];
   bookYearRange = [1800, 2000];
+  filterDialog = false;
 
   get pages() {
     if (this.pageSize == null || this.listCount == null) return 0;
@@ -136,7 +140,7 @@ export default class MainHeader extends Vue {
     this.$router.push({ name: "Book", params: { id: book.id.toString() } });
   }
   isOverflown(): boolean {
-    const element = this.$refs.roomName as any;
+    const element = this.$refs.book as any;
     if (element) {
       return element!.scrollWidth > element.clientWidth;
     }
@@ -167,3 +171,10 @@ export default class MainHeader extends Vue {
   }
 }
 </script>
+<style scoped>
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

@@ -35,7 +35,7 @@
               <v-card-title
                 v-bind="attrs"
                 v-on="isOverflown() ? on : undefined"
-                ref="roomName"
+                ref="author"
                 class="truncate font-weight-600"
                 >{{ author.firstName }} {{ author.lastName }}</v-card-title
               >
@@ -91,7 +91,7 @@ export default class MainHeader extends Vue {
     this.$router.push({ name: "Author", params: { id: author.id.toString() } });
   }
   isOverflown(): boolean {
-    const element = this.$refs.roomName as any;
+    const element = this.$refs.author as any;
     if (element) {
       return element!.scrollWidth > element.clientWidth;
     }
@@ -122,3 +122,11 @@ export default class MainHeader extends Vue {
   }
 }
 </script>
+
+<style scoped>
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
